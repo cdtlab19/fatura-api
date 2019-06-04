@@ -15,8 +15,8 @@ public class CreditCardService {
 //    private BlockchainService blockchainService;
 
 
-    public CreditCardDTO create(CreditCardDTO cc) {
-        return new CreditCardDTO(null, null, null, null);
+    public CreditCardDTO create(CreditCardDTO ccDto) {
+        return new CreditCardDTO(null, null, null, null, null);
     }
 
     public void delete(String number) {
@@ -24,7 +24,7 @@ public class CreditCardService {
     }
 
     public CreditCardDTO findByNumber(String number) {
-        return new CreditCardDTO(null, null, null, null);
+        return new CreditCardDTO(null, null, null, null, null);
     }
 
     public List<CreditCardDTO> findByHolder(String cpf) {
@@ -37,7 +37,7 @@ public class CreditCardService {
         return list;
     }
 
-    public CreditCard fromDTO(CreditCardDTO objDto) {
-        return new CreditCard(objDto.getNumber(), objDto.getCvv(), objDto.getMaxLimit(), objDto.getAvailableLimit());
-    }
+//    public CreditCard fromDTO(CreditCardDTO objDto) {
+//        return new CreditCard(objDto.getNumber(), objDto.getCvv(), objDto.getMaxLimit(), objDto.getAvailableLimit());
+//    }
 }

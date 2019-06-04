@@ -30,9 +30,7 @@ public class CHolderController {
     @ApiOperation(value="Update a card holder")
     @PutMapping(path="/{cpf}")
     public ResponseEntity<?> update(@PathVariable String cpf, @RequestBody CHolderUpdateDTO objDto) {
-         CHolder obj = service.fromDTO(objDto);
-         obj.setCpf(cpf);
-        return ResponseEntity.ok().body(obj);
+        return ResponseEntity.ok().body(objDto);
     }
 
     @ApiOperation(value="Delete a card holder")
@@ -49,7 +47,8 @@ public class CHolderController {
 
     @ApiOperation(value="Find ALL card holder")
     @GetMapping(path="/")
-    public ResponseEntity<List<?>> findAll() {
+    // public ResponseEntity<List<?>> findAll() {
+    public ResponseEntity<?> findAll() {
         return ResponseEntity.ok().body("OI!");
     }
 }

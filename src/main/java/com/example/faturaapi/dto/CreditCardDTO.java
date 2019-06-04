@@ -6,15 +6,17 @@ public class CreditCardDTO {
     private String cvv;
     private Integer maxLimit;
     private Integer availableLimit;
+    private String holderCPF;
 
     public CreditCardDTO() {
     }
 
-    public CreditCardDTO(String number, String cvv, Integer maxLimit, Integer availableLimit) {
+    public CreditCardDTO(String number, String cvv, Integer maxLimit, Integer availableLimit, String holderCPF) {
         this.number = number;
         this.cvv = cvv;
         this.maxLimit = maxLimit;
         this.availableLimit = availableLimit;
+        this.holderCPF = holderCPF;
     }
 
     public String getNumber() {
@@ -47,5 +49,13 @@ public class CreditCardDTO {
 
     public void setAvailableLimit(Integer availableLimit) {
         this.availableLimit = availableLimit;
+    }
+
+    public String getHolderCPF() {
+        return holderCPF;
+    }
+
+    public void setHolderCPF(String holderCPF) {
+        this.holderCPF = holderCPF;
     }
 }

@@ -15,11 +15,11 @@ public class CHolderService {
 //    @Autowired
 //    private BlockchainService blockchainService;
 
-    public CHolderDTO create(CHolder holder) {
+    public CHolderDTO create(CHolderDTO holderDTO) {
         return new CHolderDTO(null, null, null, null);
     }
 
-    public void update(CHolder holder) {
+    public void update(CHolderUpdateDTO holderDto) {
 
     }
 
@@ -31,17 +31,17 @@ public class CHolderService {
         return new CHolderDTO(null, null, null, null);
     }
 
-    public List<CHolderDTO> allCHolders() {
+    public List<CHolderDTO> findAll() {
         List<CHolderDTO> list = new ArrayList<>();
         return list;
     }
 
-    public CHolder fromDTO(CHolderUpdateDTO objDto) {
-        return new CHolder(null, objDto.getSex(), objDto.getMaritalStatus(), objDto.getScholarity());
-    }
-
-    public CHolder fromDTO(CHolderDTO objDto) {
-        return new CHolder(objDto.getCpf(), objDto.getSex(), objDto.getMaritalStatus(), objDto.getScholarity());
-    }
+//    public CHolder fromDTO(CHolderUpdateDTO objDto) {
+//        return new CHolder(null, objDto.getSex(), objDto.getMaritalStatus(), objDto.getScholarity());
+//    }
+//
+//    public CHolder fromDTO(CHolderDTO objDto) {
+//        return new CHolder(objDto.getCpf(), objDto.getSex(), objDto.getMaritalStatus(), objDto.getScholarity());
+//    }
 
 }
